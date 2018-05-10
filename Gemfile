@@ -8,6 +8,9 @@ gem 'rack-cors', '~>0.4', '>=0.4.0', :require=>'rack/cors'
 
 gem 'jbuilder', '~>2.0', '>=2.6.0'
 
+gem 'sass-rails', '~>5.0'
+gem 'uglifier', '>=1.3.0'
+
 group :development do
   gem 'spring', '~>2.0', '>=2.0.0'
 end
