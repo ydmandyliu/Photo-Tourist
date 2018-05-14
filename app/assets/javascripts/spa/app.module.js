@@ -1,6 +1,6 @@
 (function() {
 	"use strict";
 
-	angular.module("spa-module", ["ui.router"]);
+	angular.module("spa", ["ui.router"]);
 	
 })();
