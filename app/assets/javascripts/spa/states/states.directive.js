@@ -18,7 +18,7 @@
         	replace: true,
             bindToController: true,
             controller: 'spa.states.StatesController',
-            controllerAs: 'StatesVM',
+            controllerAs: 'statesVM',
             restrict: 'E',
             scope: {},
             link: link

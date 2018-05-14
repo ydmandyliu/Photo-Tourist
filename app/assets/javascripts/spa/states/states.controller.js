@@ -12,6 +12,10 @@
         var vm = this;
         vm.states;
         vm.state;
+        vm.edit = edit;
+        vm.create = create;
+        vm.update = update;
+        vm.remove = remove;
 
         activate();
 
@@ -19,6 +23,7 @@
 
         function activate() {
         	newState();
+            vm.states = State.query();
         }
 
         function newState() {
@@ -34,7 +39,13 @@
         }
 
         function create() {
-
+            vm.state.$save()
+                .then(function(response){
+                    //console.log(response);
+                    vm.states.push(vm.state);
+                    newState();
+                })
+                .catch(handleError);
         }
 
         function update() {
