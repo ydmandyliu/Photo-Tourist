@@ -12,6 +12,12 @@
 		<button ng-if="!statesVM.state.id"
 				type="submit"
 				ng-click="statesVM.create()">Create State</button>
+		<div ng-if="statesVM.state.id">
+			<button type="submit"
+					ng-click="statesVM.update()">Update State</button>
+			<button type="submit"
+					ng-click="statesVM.remove()">Delete States</button>
+		</div>
 	</form>
 
 	<ul>

@@ -34,8 +34,9 @@
         	console.log(response);
         }
 
-        function edit(object, index) {
-
+        function edit(object) {
+            //console.log("selected", object);
+            vm.state = object;
         }
 
         function create() {
@@ -49,15 +50,32 @@
         }
 
         function update() {
-
+            vm.state.$update()
+                .then(function(response){
+                    //console.log(response);
+                })
+                .catch(handleError);
         }
 
         function remove() {
-
+            vm.state.$delete()
+                .then(function(response){
+                    //console.log(response);
+                    //remove the element from local array
+                    //removeElement(vm.states, vm.state);
+                    vm.states = State.query();
+                    newState();
+                })
+                .catch(handleError);
         }
 
         function removeElement(elements, element) {
-
+            for(var i = 0; i < elements.length; i++) {
+                if(elements[i].id == element.id) {
+                    elements.splice(i, 1);
+                    break;
+                }
+            }
         }
     }
 })();
