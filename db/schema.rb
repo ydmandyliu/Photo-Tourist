@@ -22,12 +22,6 @@ ActiveRecord::Schema.define(version: 20180809003720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "foos", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "images", force: :cascade do |t|
     t.string   "caption"
     t.integer  "creator_id", null: false
@@ -58,6 +52,8 @@ ActiveRecord::Schema.define(version: 20180809003720) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "things", ["name"], name: "index_things_on_name", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
     t.string   "uid",                    default: "",      null: false
@@ -80,8 +76,8 @@ ActiveRecord::Schema.define(version: 20180809003720) do
     t.string   "image"
     t.string   "email"
     t.json     "tokens"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

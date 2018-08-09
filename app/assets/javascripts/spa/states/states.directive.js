@@ -5,7 +5,7 @@
         .module('spa.states')
         .directive('spaStates', StatesDirective);
 
-    StatesDirective.$inject = ['spa.APP_CONFIG'];
+    StatesDirective.$inject = ['spa.config.APP_CONFIG'];
 
     /* @ngInject */
     function StatesDirective(APP_CONFIG) {

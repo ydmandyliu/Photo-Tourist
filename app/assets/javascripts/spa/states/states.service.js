@@ -5,7 +5,7 @@
         .module('spa.states')
         .factory('spa.states.State', StateFactory);
 
-    StateFactory.$inject = ['$resource', 'spa.APP_CONFIG'];
+    StateFactory.$inject = ['$resource', 'spa.config.APP_CONFIG'];
 
     /* @ngInject */
     function StateFactory($resource, APP_CONFIG) {
