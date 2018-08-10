@@ -5,7 +5,7 @@
 	  .module("spa.authn")
 	  .config(AuthnConfig);
 
-	AuthnConfig.$inject = ["$authProvider", "spa.APP_CONFIG"];
+	AuthnConfig.$inject = ["$authProvider", "spa.config.APP_CONFIG"];
 
 	function AuthnConfig($authProvider, APP_CONFIG) {
 		$authProvider.configure({
