@@ -6,7 +6,9 @@
 		"spa.states", 
 		"spa.authn", 
 		"spa.config",
-		"spa.layout"
+		"spa.layout",
+		"spa.subjects",
+		"spa.authz"
 		]);
 	
 })();
