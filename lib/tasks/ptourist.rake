@@ -1,4 +1,4 @@
-namespace :gtourist do
+namespace :ptourist do
   MEMBERS=["mike","carol","alice","greg","marsha","peter","jan","bobby","cindy", "sam"]
   ADMINS=["mike","carol"]
   ORIGINATORS=["carol","alice"]
