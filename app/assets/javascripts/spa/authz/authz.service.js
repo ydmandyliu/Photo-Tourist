@@ -2,12 +2,12 @@
   "use strict";
 
   angular
-    .module("spa-demo.authz")
-    .service("spa-demo.authz.Authz", Authz);
+    .module("spa.authz")
+    .service("spa.authz.Authz", Authz);
 
   Authz.$inject = ["$rootScope", "$q",
-                   "spa-demo.authn.Authn",
-                   "spa-demo.authn.whoAmI"];
+                   "spa.authn.Authn",
+                   "spa.authn.whoAmI"];
 
   function Authz($rootScope, $q, Authn, whoAmI) {
     var service = this;
