@@ -6,29 +6,10 @@ class Role < ActiveRecord::Base
 
   belongs_to :user, inverse_of: :roles
 
-  def has_role(role_list, mname=nil, mid=nil) 
-    role_names=roles.relevant(mname, mid).map {|r| r.role_name}
-    (role_names & role_list).any?
-  end
+  scope :relevant, ->(model_name, model_id) { 
+    where("mname is null or (mname=:mname and (mid is null or mid=:mid))", 
+      :mname=>model_name, :mid=>model_id)
+  }
 
-  def add_role role_name, object
-    if object.is_a?(Class)
-      self.roles.new(:role_name=>role_name,
-                     :mname=>object.name,
-                     :mid=>nil)
-    else
-      self.roles.new(:role_name=>role_name,
-                     :mname=>object.model_name.name,
-                     :mid=>object.id)
-    end
-  end
-
-  def add_roles role_name, items
-    items.each {|item| add_role(role_name, item)}
-    self
-  end
-
-  def is_admin?
-     roles.where(:role_name=>Role::ADMIN).exists?
-  end
+  scope :application, ->{ where("mid is null") }
 end

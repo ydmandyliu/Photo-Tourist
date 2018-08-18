@@ -3,12 +3,12 @@
 
 	angular.module("spa", [
 		"ui.router", 
-		"spa.states", 
-		"spa.authn", 
 		"spa.config",
+		"spa.authn", 
+		"spa.authz",
 		"spa.layout",
-		"spa.subjects",
-		"spa.authz"
+		"spa.states", 
+		"spa.subjects"
 		]);
 	
 })();

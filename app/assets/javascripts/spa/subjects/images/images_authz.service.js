@@ -2,11 +2,11 @@
   "use strict";
 
   angular
-    .module("spa-demo.subjects")
-    .factory("spa-demo.subjects.ImagesAuthz", ImagesAuthzFactory);
+    .module("spa.subjects")
+    .factory("spa.subjects.ImagesAuthz", ImagesAuthzFactory);
 
-  ImagesAuthzFactory.$inject = ["spa-demo.authz.Authz",
-                                "spa-demo.authz.BasePolicy"];
+  ImagesAuthzFactory.$inject = ["spa.authz.Authz",
+                                "spa.authz.BasePolicy"];
   function ImagesAuthzFactory(Authz, BasePolicy) {
     function ImagesAuthz() {
       BasePolicy.call(this, "Image");

@@ -4,6 +4,7 @@
 //= require angular
 //= require angular-ui-router
 //= require angular-resource
+//= require angular-cookie
 //= require ng-token-auth
 
 //= require spa/app.module
@@ -20,9 +21,9 @@
 //= require spa/authn/authn_session/authn_session.component
 //= require spa/authn/authn_check/authn_check.directive
 
-//= require spa-demo/authz/authz.module
-//= require spa-demo/authz/authz.service
-//= require spa-demo/authz/base_policy.service
+//= require spa/authz/authz.module
+//= require spa/authz/authz.service
+//= require spa/authz/base_policy.service
 
 //= require spa/layout/layout.module
 //= require spa/layout/navbar/navbar.component

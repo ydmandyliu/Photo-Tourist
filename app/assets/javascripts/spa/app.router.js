@@ -26,7 +26,7 @@
 	        templateUrl: APP_CONFIG.authn_page_html
 	    })
 	    .state("images",{
-	       url: "/images/:id",
+	        url: "/images/:id",
 	        templateUrl: APP_CONFIG.images_page_html
 	    })
 	    .state("things",{
