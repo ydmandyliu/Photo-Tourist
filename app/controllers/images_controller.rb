@@ -1,8 +1,8 @@
 class ImagesController < ApplicationController
-  before_action :set_image, only: [:show, :update, :destroy]
+  before_action :set_image, only: [:show, :update, :destroy, :content]
   wrap_parameters :image, include: ["caption"]
   before_action :authenticate_user!, only: [:create, :update, :destroy]
-  after_action :verify_authorized
+  after_action :verify_authorized, except: [:content]
   after_action :verify_policy_scoped, only: [:index]
 
   rescue_from EXIFR::MalformedJPEG, with: :contents_error
