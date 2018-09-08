@@ -11,3 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+*.swp
+
+/db/images
+
+/client/build
