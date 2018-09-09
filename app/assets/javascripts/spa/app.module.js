@@ -2,7 +2,8 @@
 	"use strict";
 
 	angular.module("spa", [
-		"ui.router", 
+		"ui.router",
+		"ngFileUpload",
 		"spa.config",
 		"spa.authn", 
 		"spa.authz",

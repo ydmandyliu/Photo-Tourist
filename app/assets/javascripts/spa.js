@@ -6,6 +6,8 @@
 //= require angular-resource
 //= require angular-cookie
 //= require ng-token-auth
+//= require ng-file-upload-shim
+//= require ng-file-upload
 
 //= require spa/app.module
 //= require spa/app.router
