@@ -55,7 +55,7 @@ Capybara.configure do |config|
   #used when :js=>true
   config.javascript_driver = :poltergeist
 end
-#Capybara.javascript_driver = :selenium
+# Capybara.javascript_driver = :selenium
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new( app,
