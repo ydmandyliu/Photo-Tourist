@@ -21,7 +21,7 @@ class ApplicationController < ActionController::API
     end
 
   	def record_not_found(exception)
-  		full_messages_error "cannot find id[#{params[:id]}]", :not_found
+  		full_message_error "cannot find id[#{params[:id]}]", :not_found
       Rails.logger.debug exception.message
   	end
 
