@@ -8,7 +8,6 @@ class ImageContent
   CONTENT_TYPES=["image/jpeg","image/jpg"]
   MAX_CONTENT_SIZE=10*1000*1024
 
-  include Mongoid::Document
   field :image_id, type: Integer
   field :width, type: Integer
   field :height, type: Integer
@@ -56,6 +55,10 @@ class ImageContent
       self.width = xf.width   if xf
       self.height = xf.height if xf
     end
+  end
+
+  def suffix
+    "jpg" if CONTENT_TYPES.include? content_type
   end
 
   def self.to_binary(value)
