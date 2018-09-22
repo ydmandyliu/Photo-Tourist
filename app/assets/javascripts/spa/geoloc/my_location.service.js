@@ -2,8 +2,8 @@
   "use strict";
 
   angular
-    .module("spa-demo.geoloc")
-    .provider("spa-demo.geoloc.myLocation", MyLocationProvider);
+    .module("spa.geoloc")
+    .provider("spa.geoloc.myLocation", MyLocationProvider);
 
   MyLocationProvider.$inject = [];
   function MyLocationProvider() {
@@ -17,7 +17,7 @@
     function MyLocation() {      
     }
 
-    provider.$get = ["$window", "$q", "spa-demo.geoloc.geocoder", 
+    provider.$get = ["$window", "$q", "spa.geoloc.geocoder", 
                      function($window, $q, geocoder) {
 
       //returns true/false whether current location provided
