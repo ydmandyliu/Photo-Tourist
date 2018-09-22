@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module("spa-demo.geoloc")
+    .module("spa.geoloc")
     .component("sdCurrentOriginSelector", {
       templateUrl: templateUrl,
       controller: CurrentOriginSelectorController,
@@ -10,7 +10,7 @@
     });
 
 
-  templateUrl.$inject = ["spa-demo.config.APP_CONFIG"];
+  templateUrl.$inject = ["spa.config.APP_CONFIG"];
   function templateUrl(APP_CONFIG) {
     return APP_CONFIG.current_origin_selector_html;
   }    
