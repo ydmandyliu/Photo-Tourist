@@ -69,7 +69,7 @@ class ImagesController < ApplicationController
     if @image.update(image_params)
       head :no_content
     else
-      render json: @image.errors, status: :unprocessable_entity
+      render json: {errors:@image.errors.messages}, status: :unprocessable_entity
     end
   end
 
