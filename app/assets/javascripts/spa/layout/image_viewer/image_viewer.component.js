@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module("spa-demo.layout")
+    .module("spa.layout")
     .component("sdImageViewer", {
       templateUrl: templateUrl,
       controller: ImageViewerController,
@@ -13,12 +13,12 @@
       },
     });
 
-  templateUrl.$inject = ["spa-demo.config.APP_CONFIG"];
+  templateUrl.$inject = ["spa.config.APP_CONFIG"];
   function templateUrl(APP_CONFIG) {
     return APP_CONFIG.image_viewer_html;
   }    
 
-  ImageViewerController.$inject = ["$scope", "$element","spa-demo.layout.ImageQuerySize"];
+  ImageViewerController.$inject = ["$scope", "$element","spa.layout.ImageQuerySize"];
   function ImageViewerController($scope, $element,ImageQuerySize) {
     var sizing=null;
     var vm=this;
