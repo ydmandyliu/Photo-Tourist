@@ -3,7 +3,7 @@ require_relative '../support/image_content_helper.rb'
 
 #Mongo::Logger.logger.level = ::Logger::DEBUG
 
-RSpec.describe ImageContent, type: :model do
+RSpec.describe "ImageContent", type: :model do
   include_context "db_cleanup"
   include ImageContentHelper
   let(:fin) { image_file }
