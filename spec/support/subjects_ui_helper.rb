@@ -7,6 +7,10 @@ module SubjectsUiHelper
     end
   end
 
+  def image_caption image
+    image.caption || "(no caption #{image.id})" 
+  end
+
   def get_linkables image
     things=ThingPolicy::Scope.new(current_user, Thing.not_linked(image)).user_roles(true,false)
     things=ThingPolicy.merge(things)
@@ -20,6 +24,8 @@ module SubjectsUiHelper
                               :visible=>false,
                               :count=>ThingImage.where(:image=>image).count,
                               :wait=>5)
+      expect(page).to have_css("div.image-existing img",:count=>1,:wait=>5)
+      wait_until {find("div.image-existing img")[:complete]==true}
     end
     expected_linkables ||= get_linkables(image).size
     if expected_linkables && logged_in?
@@ -35,6 +41,7 @@ module SubjectsUiHelper
     within("sd-image-editor .image-form") do
       expect(page).to have_css("span.image_id",:text=>image.id,:visible=>false)
       expect(page).to have_css(".image-controls")
+      expect(page).to have_css("div.image-existing img",:count=>1,:wait=>5)
     end
   end
 
@@ -48,7 +55,7 @@ module SubjectsUiHelper
       visit "#{ui_path}/#/things/#{thing.id}"
     end
     within("sd-thing-editor .thing-form") do
-      expect(page).to have_css("span.thing_id",:text=>thing.id,:visible=>false)
+      expect(page).to have_css("span.thing_id",:text=>thing.id,:visible=>false,:wait=>5)
     end
   end
 
@@ -57,10 +64,17 @@ module SubjectsUiHelper
     within("sd-thing-editor .thing-form") do
       expect(page).to have_css("span.thing_id",:text=>thing.id,
                                                :visible=>false)
-      expect(page).to have_css("ul.thing-images li span.image_id",
+      expect(page).to have_css("sd-image-viewer .image-area img",
                               :visible=>false,
                               :count=>ThingImage.where(:thing=>thing).count,
                               :wait=>5)
+      wait_until {find("sd-image-viewer .image-area img")[:complete]==true}
+      if (page.has_css?("ul.thing-images"))
+        expect(page).to have_css("ul.thing-images li span.image_id",
+                                :visible=>false,
+                                :count=>ThingImage.where(:thing=>thing).count,
+                                :wait=>5)
+      end
     end
   end
 
