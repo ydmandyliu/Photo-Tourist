@@ -1,4 +1,6 @@
 class GeocoderController < ApplicationController
+  before_action :set_geocoder
+  
   def addresses
   	address=address_params[:address]
     geoloc, cache=@geocoder.geocode(address)
