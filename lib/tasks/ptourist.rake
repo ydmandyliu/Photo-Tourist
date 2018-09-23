@@ -4,6 +4,7 @@ namespace :ptourist do
   ORIGINATORS=["carol","alice"]
   BOYS=["greg","peter","bobby"]
   GIRLS=["marsha","jan","cindy"]
+  BASE_URL="http://dev9.jhuep.com/fullstack-capstone"
 
   def user_name first_name
     last_name = (first_name=="alice") ? "nelson" : "brady"
@@ -54,6 +55,17 @@ namespace :ptourist do
     image=Image.create(:creator_id=>organizer.id,:caption=>img[:caption])
     organizer.add_role(Role::ORGANIZER, image).save
   end
+
+  def create_image_content img
+    url="#{BASE_URL}/#{img[:path]}"
+    puts "downloading #{url}"
+    contents = open(url,{ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}).read
+    original_content=ImageContent.new(:image_id=>img[:image].id,
+                                      :content_type=>"image/jpeg", 
+                                      :content=>BSON::Binary.new(contents))
+    ImageContentCreator.new(img[:image], original_content).build_contents.save!
+  end
+
   def create_thing thing, organizer, members, images
     thing=Thing.create!(thing)
     organizer.add_role(Role::ORGANIZER, thing).save
