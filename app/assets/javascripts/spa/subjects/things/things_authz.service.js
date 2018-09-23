@@ -27,7 +27,7 @@
         return Authz.isMember(thing);
     };
     ThingsAuthz.prototype.canUpdateImage=function(thing) {
-        return Authz.isOrganizer(thing)
+        return Authz.isOrganizer(thing);
     };
     ThingsAuthz.prototype.canRemoveImage=function(thing) {
         return Authz.isOrganizer(thing) || Authz.isAdmin();
