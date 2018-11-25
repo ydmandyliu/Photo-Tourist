@@ -59,10 +59,9 @@
                                    "spa.subjects.Image",
                                    "spa.subjects.ImageThing",
                                    "spa.subjects.ImageLinkableThing",
-                                   "spa.geoloc.geocoder"
-                                   ];
+                                   "spa.geoloc.geocoder"];
   function ImageEditorController($scope, $q, $state, $stateParams, 
-                                 Authz, Image, ImageThing,ImageLinkableThing, geocoder) {
+                                 Authz, DataUtils, Image, ImageThing, ImageLinkableThing, geocoder) {
     var vm=this;
     vm.selected_linkables=[];
     vm.create = create;

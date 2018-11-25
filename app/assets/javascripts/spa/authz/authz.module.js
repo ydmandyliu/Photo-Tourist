@@ -2,6 +2,5 @@
   "use strict";
 
   angular
-    .module("spa.authz", [
-    ]);
+    .module("spa.authz", []);
 })();

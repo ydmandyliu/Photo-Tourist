@@ -4,7 +4,7 @@ namespace :ptourist do
   ORIGINATORS=["carol","alice"]
   BOYS=["greg","peter","bobby"]
   GIRLS=["marsha","jan","cindy"]
-  BASE_URL="http://dev9.jhuep.com/fullstack-capstone"
+  BASE_URL="https://www.arthurweill.fr/img/unsplash/images_1280"
 
   def user_name first_name
     last_name = (first_name=="alice") ? "nelson" : "brady"
@@ -136,16 +136,16 @@ namespace :ptourist do
     organizer=get_user("alice")
     members=boy_users
     images=[
-    {:path=>"db/bta/image001_original.jpg",
+    {:path=>"tumblr_mtaxhnoFzM1st5lhmo1_1280.jpg",
      :caption=>"Front of Museum Restored: 1884 B&O Railroad Museum Roundhouse",
      :lng=>-76.6327453,
      :lat=>39.2854217,
      :priority=>0},
-    {:path=>"db/bta/image002_original.jpg",
+    {:path=>"XW4C3wPqyJs_1280.jpg",
      :caption=>"Roundhouse Inside: One-of-a-Kind Railroad Collection inside the B&O Roundhouse",
      :lng=>-76.6327453,
      :lat=>39.2854217},
-    {:path=>"db/bta/image003_original.jpg",
+    {:path=>"uploads-141220211075617c40312-e2ddba22_1280.jpg",
      :caption=>"40 acres of railroad history at the B&O Railroad Museum",
      :lng=>-76.6327453,
      :lat=>39.2854217},
@@ -158,20 +158,20 @@ namespace :ptourist do
     organizer=get_user("alice")
     members=boy_users
     images=[
-    {:path=>"db/bta/DSC_5358.jpg",
+    {:path=>"tumblr_n21lq8Tmpl1st5lhmo1_1280.jpg",
      :caption=>"Boat at Fort McHenry",
      :lng=>-76.578519,
      :lat=>39.265882},
-    {:path=>"db/bta/DSC_5393.jpg",
+    {:path=>"YN_JWPDYVoM_1280.jpg",
      :caption=>"Boat heading in to Fell's Point",
      :lng=>-76.593026,
      :lat=>39.281676},
-    {:path=>"db/bta/DSC_5441.jpg",
+    {:path=>"tumblr_mzzqt7wyEU1st5lhmo1_1280.jpg",
      :caption=>"Boat at Harborplace",
      :lng=>-76.611449,
      :lat=>39.285887,
      :priority=>0},
-    {:path=>"db/bta/DSC_5469.jpg",
+    {:path=>"tumblr_n0hpwpZrVc1st5lhmo1_1280.jpg",
      :caption=>"Boat passing Pier 5",
      :lng=>-76.605206,
      :lat=>39.284038}
@@ -184,12 +184,12 @@ namespace :ptourist do
     organizer=get_user("greg")
     members=boy_users
     images=[
-    {:path=>"db/bta/image004_original.jpg",
+    {:path=>"tumblr_n7ygur3NV91st5lhmo1_1280.jpg",
      :caption=>"Overview",
      :lng=>nil,
      :lat=>nil
      },
-    {:path=>"db/bta/image005_original.jpg",
+    {:path=>"tumblr_naj3hqGqeh1st5lhmo1_1280.jpg",
      :caption=>"Roger Taney Statue",
      :lng=>-76.615686,
      :lat=>39.297953,
@@ -204,7 +204,7 @@ namespace :ptourist do
     organizer=get_user("carol")
     members=girl_users
     images=[
-    {:path=>"db/bta/hitim-001.jpg",
+    {:path=>"tumblr_muui9yjMVc1st5lhmo1_1280.jpg",
      :caption=>"Hotel Front Entrance",
      :lng=>-76.64285450000001, 
      :lat=>39.454538,
@@ -219,23 +219,23 @@ namespace :ptourist do
     organizer=get_user("carol")
     members=girl_users
     images=[
-    {:path=>"db/bta/naqua-001.jpg",
+    {:path=>"tumblr_n5e5qd8BB81st5lhmo1_1280.jpg",
      :caption=>"National Aquarium buildings",
      :lng=>-76.6083, 
      :lat=>39.2851,
      :priority=>0
      },
-    {:path=>"db/bta/naqua-002.jpg",
+    {:path=>"tumblr_mr80okcWTk1st5lhmo1_1280.jpg",
      :caption=>"Blue Blubber Jellies",
      :lng=>-76.6083, 
      :lat=>39.2851,
      },
-    {:path=>"db/bta/naqua-003.jpg",
+    {:path=>"tumblr_n5e0d0qDIW1st5lhmo1_1280.jpg",
      :caption=>"Linne's two-toed sloths",
      :lng=>-76.6083, 
      :lat=>39.2851,
      },
-    {:path=>"db/bta/naqua-004.jpg",
+    {:path=>"tumblr_n6rz5eNBG51st5lhmo1_1280.jpg",
      :caption=>"Hosting millions of students and teachers",
      :lng=>-76.6083, 
      :lat=>39.2851,
@@ -252,49 +252,49 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     organizer=get_user("marsha")
     members=girl_users
     images=[
-    {:path=>"db/bta/hpm-001.jpg",
+    {:path=>"photo-1415226161018-3ec581fa733d_1280.jpg",
      :caption=>"Hotel Front Entrance",
      :lng=>-76.5987, 
      :lat=>39.2847,
      :priority=>0
      },
-    {:path=>"db/bta/hpm-002.jpg",
+    {:path=>"tumblr_n2k1499dIp1st5lhmo1_1280.jpg",
      :caption=>"Terrace",
      :lng=>-76.5987, 
      :lat=>39.2847,
      :priority=>1
      },
-    {:path=>"db/bta/hpm-003.jpg",
+    {:path=>"tumblr_mopqfpSTPN1st5lhmo1_1280.jpg",
      :caption=>"Cozy Corner",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-004.jpg",
+    {:path=>"tumblr_mve32wGvZ51st5lhmo1_1280.jpg",
      :caption=>"Fitness Center",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-005.jpg",
+    {:path=>"uploads-1411419068566071cef10-7562527b_1280.jpg",
      :caption=>"Gallery Area",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-006.jpg",
+    {:path=>"tumblr_mo2xfarCvW1st5lhmo1_1280.jpg",
      :caption=>"Harbor Room",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-007.jpg",
+    {:path=>"tumblr_n6et0idQ131st5lhmo1_1280.jpg",
      :caption=>"Indoor Pool",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-008.jpg",
+    {:path=>"uploads-141223808515744db9995-3361b5e1_1280.jpg",
      :caption=>"Lobby",
      :lng=>-76.5987, 
      :lat=>39.2847
      },
-    {:path=>"db/bta/hpm-009.jpg",
+    {:path=>"tumblr_n381h3oLlY1st5lhmo1_1280.jpg",
      :caption=>"Specialty King",
      :lng=>-76.5987, 
      :lat=>39.2847
@@ -303,7 +303,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_thing thing, organizer, members, images
 
     organizer=get_user("peter")
-    image= {:path=>"db/bta/aquarium.jpg",
+    image= {:path=>"dfZbts6B4yw_1280.jpg",
      :caption=>"Aquarium",
      :lng=>-76.6083, 
      :lat=>39.2851
@@ -311,7 +311,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("jan")
-    image= {:path=>"db/bta/bromo_tower.jpg",
+    image= {:path=>"tumblr_n10mycKEv41st5lhmo1_1280.jpg",
      :caption=>"Bromo Tower",
      :lng=>-76.6228645, 
      :lat=>39.2876736
@@ -319,7 +319,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("bobby")
-    image= {:path=>"db/bta/federal_hill.jpg",
+    image= {:path=>"photo-1415045384817-2f9cf7f2ed79_1280.jpg",
      :caption=>"Federal Hill",
      :lng=>-76.6152507,
      :lat=>39.2780092
@@ -327,7 +327,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("alice")
-    image= {:path=>"db/bta/row_homes.jpg",
+    image= {:path=>"tumblr_mq7ar9reMm1st5lhmo1_1280.jpg",
      :caption=>"Row Homes",
      :lng=>-76.6152153,
      :lat=>39.3149715
@@ -335,7 +335,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("alice")
-    image= {:path=>"db/bta/skyline_water_level.jpg",
+    image= {:path=>"uploads-14117450256890cec7683-4575979c_1280.jpg",
      :caption=>"Skyline Water Level",
      :lng=>-76.6284366, 
      :lat=>39.2780493
@@ -343,7 +343,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("bobby")
-    image= {:path=>"db/bta/skyline.jpg",
+    image= {:path=>"tumblr_mtavhdvESW1st5lhmo1_1280.jpg",
      :caption=>"Skyline",
      :lng=>-76.6138132,
      :lat=>39.2801504
@@ -351,7 +351,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("marsha")
-    image= {:path=>"db/bta/visitor_center.jpg",
+    image= {:path=>"tumblr_mqq4hdACzf1st5lhmo1_1280.jpg",
      :caption=>"Visitor Center",
      :lng=>-76.6155792, 
      :lat=>39.28565
@@ -359,7 +359,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     create_image organizer, image
 
     organizer=get_user("greg")
-    image= {:path=>"db/bta/world_trade_center.jpg",
+    image= {:path=>"5ulmc8IHdLc_1280.jpg",
      :caption=>"World Trade Center",
      :lng=>-76.6117195,
      :lat=>39.2858057
