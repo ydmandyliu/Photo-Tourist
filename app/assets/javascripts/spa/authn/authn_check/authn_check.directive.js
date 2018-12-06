@@ -18,7 +18,7 @@
     return directive;
 
     function link(scope, element, attrs) {
-      console.log("AuthnCheck",scope);
+      // console.log("AuthnCheck",scope);
     }
   }
 
