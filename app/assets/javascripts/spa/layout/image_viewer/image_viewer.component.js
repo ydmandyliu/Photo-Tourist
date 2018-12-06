@@ -31,7 +31,7 @@
 
     vm.$onInit = function() {
       vm.currentIndex = 0;      
-      console.log(vm.name, "ImageViewerController", $scope);
+      // console.log(vm.name, "ImageViewerController", $scope);
     }
     vm.$postLink = function() {
       sizing=new ImageQuerySize($element.find('div'), this.minWidth);
@@ -44,10 +44,10 @@
     return;
     //////////////
     function resizeHandler(event) { 
-      console.log("window resized");
+      // console.log("window resized");
       if (sizing.updateSizes(vm.minWidth)) {
         vm.queryString=sizing.queryString();
-        console.log("new query size", vm.queryString);
+        // console.log("new query size", vm.queryString);
         $scope.$apply();
       }
     }
@@ -61,7 +61,7 @@
       setCurrentIndex(vm.currentIndex-1);
     }
     function setCurrentIndex(index) {
-      console.log("setCurrentIndex", vm.name, index);
+      // console.log("setCurrentIndex", vm.name, index);
       if (vm.images && vm.images.length > 0) {
         if (index >= vm.images.length) {
           vm.currentIndex=0;
@@ -85,7 +85,7 @@
       if (!object) { return null; }
       var url = object.image_id ? object.image_content_url : object.content_url;
       url += vm.queryString;
-      console.log(vm.name, "url=", url);
+      // console.log(vm.name, "url=", url);
       return url;
     }
     function imageId(object) {
