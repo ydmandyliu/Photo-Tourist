@@ -30,16 +30,16 @@
     vm.changeDistance=changeDistance;
 
     vm.$onInit = function() {
-      console.log("CurrentOriginSelectorController",$scope);
+      // console.log("CurrentOriginSelectorController",$scope);
     }
     return;
     //////////////
     function lookupAddress() {
-      console.log("lookupAddress for", vm.address);
+      // console.log("lookupAddress for", vm.address);
       geocoder.getLocationByAddress(vm.address).$promise.then(
         function(location){
           currentOrigin.setLocation(location);
-          console.log("location", location);
+          // console.log("location", location);
         });
     }
 
@@ -56,12 +56,12 @@
     function useCurrentLocation() {
       myLocation.getCurrentLocation().then(
         function(location){
-          console.log("useCurrentLocation", location);
+          // console.log("useCurrentLocation", location);
           currentOrigin.setLocation(location);
           vm.myPositionError=null;
         },
         function(err){
-          console.log(err);
+          // console.log(err);
           vm.myPositionError=err;
         });
     }    

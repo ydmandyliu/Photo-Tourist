@@ -23,7 +23,7 @@
     this.version += 1;
   }  
   CurrentOrigin.prototype.setLocation = function(location) {
-    console.log("setLocation", location);
+    // console.log("setLocation", location);
     this.location = angular.copy(location);
     this.version += 1;
   }
@@ -43,7 +43,7 @@
   }
 
   CurrentOrigin.prototype.setDistance = function(distance) {
-    console.log("setDistance", distance);
+    // console.log("setDistance", distance);
     this.distance = distance;
     this.version += 1;
   }
