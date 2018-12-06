@@ -39,7 +39,7 @@
     var vm=this;
 
     vm.$onInit = function() {
-      console.log("ImageSelectorController",$scope);
+      // console.log("ImageSelectorController",$scope);
       $scope.$watch(function(){ return Authz.getAuthorizedUserId(); }, 
                     function(){ 
                       if (!$stateParams.id) { 
@@ -73,7 +73,7 @@
     vm.locationByAddress = locationByAddress;
 
     vm.$onInit = function() {
-      console.log("ImageEditorController",$scope);
+      // console.log("ImageEditorController",$scope);
       $scope.$watch(function(){ return Authz.getAuthorizedUserId(); }, 
                     function(){ 
                       if ($stateParams.id) {
@@ -86,7 +86,7 @@
     return;
     //////////////
     function newResource() {
-      console.log("newResource()");
+      // console.log("newResource()");
       vm.item = new Image();
       vm.imagesAuthz.newItem(vm.item);
       return vm.item;
@@ -94,7 +94,7 @@
 
     function reload(imageId) {
       var itemId = imageId ? imageId : vm.item.id;
-      console.log("re/loading image", itemId);
+      // console.log("re/loading image", itemId);
       vm.item = Image.get({id:itemId});
       vm.things = ImageThing.query({image_id:itemId});
       vm.linkable_things = ImageLinkableThing.query({image_id:itemId});
@@ -115,7 +115,7 @@
     }
 
     function setImageContent(dataUri) {
-      console.log("setImageContent", dataUri ? dataUri.length : null);      
+      // console.log("setImageContent", dataUri ? dataUri.length : null);      
       vm.item.image_content = DataUtils.getContentFromDataUri(dataUri);
     }
 
@@ -142,10 +142,10 @@
       });
 
       vm.selected_linkables=[];
-      console.log("waiting for promises", promises);
+      // console.log("waiting for promises", promises);
       $q.all(promises).then(
         function(response){
-          console.log("promise.all response", response); 
+          // console.log("promise.all response", response); 
           $scope.imageform.$setPristine();
           reload(); 
         },
@@ -156,24 +156,24 @@
       vm.item.errors = null;
       vm.item.$delete().then(
         function(){ 
-          console.log("remove complete", vm.item);          
+          // console.log("remove complete", vm.item);          
           clear();
         },
         handleError);      
     }
 
     function locationByAddress(address) {
-      console.log("locationByAddress for", address);
+      // console.log("locationByAddress for", address);
       geocoder.getLocationByAddress(address).$promise.then(
         function(location){
           vm.location = location;
           vm.item.position = location.position;
-          console.log("location", vm.location);
+          // console.log("location", vm.location);
         });
     }
 
     function handleError(response) {
-      console.log("error", response);
+      // console.log("error", response);
       if (response.data) {
         vm.item["errors"]=response.data.errors;          
       } 
