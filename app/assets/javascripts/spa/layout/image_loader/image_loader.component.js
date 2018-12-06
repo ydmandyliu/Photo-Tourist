@@ -27,7 +27,7 @@
     vm.debug=debug;
 
     vm.$onInit = function() {
-      console.log("ImageLoaderController",$scope);
+      // console.log("ImageLoaderController",$scope);
       $scope.$watch(function(){ return vm.dataUri }, 
                     function(){ vm.resultDataUri({dataUri: vm.dataUri}); });      
       // $scope.$watch(function(){ return vm.file }, 
@@ -58,7 +58,7 @@
     //   }      
     // }
     function debug() {
-      console.log("ImageLoaderController",$scope);      
+      // console.log("ImageLoaderController",$scope);      
     }
   }
 })();
