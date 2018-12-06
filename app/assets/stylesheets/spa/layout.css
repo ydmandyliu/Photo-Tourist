@@ -3,11 +3,16 @@
  */
 
 body {
-	background-color: #d2b48c;
+	background-color: white;
+  font-family: 'Catamaran', sans-serif;;
 }
 
 form .invalid {
 	color: red;
+}
+
+.outlined {
+  border: 1px solid black;
 }
 
 .fullsize {
@@ -15,11 +20,87 @@ form .invalid {
 	padding-left: 0px;
 }
 
+/********** text **********/
+
+a {
+  color: #192933;
+}
+
+li.selected a {
+  color: #069ee0;
+}
+
+li.selected a:hover {
+  font-style: normal;
+}
+
+.tab-label a {
+  color: #707785;
+}
+
+a:hover {
+  color: #069ee0;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.tab-label a:hover {
+  color: #192933;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.description {
+  text-align: justify;
+  padding-right: 5px;
+}
+
+div.thing-info {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.thing-marker-info div {
+  margin-top: 3px;
+}
+
+div.thing-marker-info img {
+  margin-top: 3px;
+}
+
+.thing-info h4 {
+  font-weight: bold;
+  color: #069ee0;
+}
+
 /*********** navbar *************/
+
+.navbar {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-default .navbar-brand {
+  color: #069ee0;
+}
+
+.navbar-brand {
+  font-family: 'Lobster';
+  font-size: 30px;
+}
+
+#main-menubar nav.navbar {
+  margin-bottom: 0px;
+  background-color: white;
+}
 
 .nav li form {
   padding-left: 10px; /* adds spacing along left of dropdown menu form */
   padding-right: 10px;
+}
+
+.navbar-form {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* get the two origin forms to be side-by-side */
@@ -38,6 +119,194 @@ span.search-criteria form input {
 /* right-size the distance field */
 span.search-criteria form input[name='distance-limit'] {
   width: 75px;
+}
+
+h3 {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+#authn-check div button {
+  margin-bottom: 10px;
+  padding-top: 4px;
+}
+
+#authn-check div button:hover {
+  box-shadow: 0px 0px 2px grey;
+}
+
+#authn-check div label {
+  margin-left: 15px;
+  font-weight: normal;
+}
+
+button.btn.btn-default, label.btn.btn-default {
+  margin-left: 15px;
+  margin-right: 10px;
+  width: 125px;
+  border-radius: 15px;
+}
+
+label.btn.btn-default {
+  margin-left: 0px;
+}
+
+button.btn.btn-default:hover, label.btn.btn-default:hover {
+  border-width: 0px;
+  color: white;
+  background-color: #069ee0;
+  opacity: 1;
+}
+
+label.btn.btn-default:hover {
+  margin-left: 0px;
+}
+
+form#login-form {
+  padding-left: 0px;
+}
+
+.form-group, #new-account {
+  padding-left: 10px;
+}
+
+form.navbar-form {
+  padding-left: 0px;
+}
+
+input::placeholder {
+  font-style: italic;
+  padding-top: 5px;
+  padding-left: 5px;
+  color: #cccccc;
+}
+
+#signup-form div input {
+  padding-left: 0px;
+}
+
+ul.dropdown-menu {
+  width: 200px;
+}
+
+#login-dropdown ul.dropdown-menu {
+  width: 100px;
+}
+
+.nav > li > a {
+  padding-bottom: 7px;
+}
+/*********** main display-area ********/
+#display-area {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*********** areas ********/
+div.areas-left, div.areas-right {
+  padding-left: 0;
+  padding-right: 0;
+}
+div.area-pane {
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  color: #192933;
+}
+div.area-pane input[type='checkbox'] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+div.area-pane div.tab-content {
+  height: 44vh;
+  overflow-y: auto; 
+}
+div.area-pane.expanded div.tab-content {
+  height: 93vh;
+}
+
+div.area-pane div.tab-pane ul.items {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+div.area-pane div.tab-pane ul.items li span {
+  margin-left: 5px;
+}
+
+div.area-pane div.tab-pane ul.items span.id {
+  display: none;
+}
+div.area-pane div.tab-pane ul.items img {
+  width: 50px;
+}
+div.area-pane.expanded div.tab-pane ul.items img {
+  width: 100px;
+}
+
+div.area-pane div.tab-pane ul.items li.selected a span {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 3px 10px 2px 10px;
+  border-radius: 15px;
+  background-color: #eeeeee;
+}
+
+.nav-pills > li.active > a {
+  background-color: #dddddd;
+  color: #444444;
+  border-bottom: 5px solid #069ee0;
+}
+
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+.nav-pills > li > a:hover, .nav-pills > li.active > a:hover {
+  background-color: #dddddd;
+  color: #444444;
+}
+
+.nav-pills > li.active > a:hover {
+  color: #069ee0;
+}
+
+ul.tab-label {
+  border-radius: 2px;
+  background-color: #dddddd;
+  border-top: 1px solid #cccccc;
+  /*font-family: 'Ubuntu';*/
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+div.areas-pane > ul.tab-label li a {
+  line-height: 7px;
+  font-size: 0.8em;
+}
+
+ul.area.tab-label.nav.nav-pills {
+  border-bottom: 2px solid #069ee0;
+}
+
+span.overlay.glyphicon.glyphicon-chevron-left, span.overlay.glyphicon.glyphicon-chevron-right {
+  color: #069ee0;
+  text-shadow: 0px 0px 2px grey;
+  opacity: 0.2;
+  margin-top: 30px;
+}
+
+span.glyphicon {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+/*** map height ***/
+
+div.area-pane div.tab-content div.tab-pane,
+div.area-pane div.tab-content div.tab-pane div#map {
+  height: 100%;
 }
 
 /********************************/
@@ -100,6 +369,7 @@ sd-image-viewer .caption {
 sd-image-viewer .glyphicon {
   font-size: 5em;
 }
+
 sd-image-viewer span.image-browse {
   position: absolute;
   top: 10px;
@@ -112,20 +382,76 @@ sd-image-viewer .glyphicon-chevron-left {
   top: 40%;
   left: 20px;
 }
+
 sd-image-viewer .glyphicon-chevron-right {
   position: absolute;
   top: 40%;
   right: 20px;
 }
 
+sd-image-viewer div.image-items span.id {
+  display: none;
+}
+
+.image-existing img {
+  margin-bottom: 10px;
+}
+
+.image-caption input, .thing-name input {
+  border-width: 0px;
+  border-bottom: 1px solid #069ee0;
+}
+
+form div {
+  margin-bottom: 5px;
+}
+
+ul.image-things {
+  margin-bottom: 0px;
+}
+
+.image-controls button {
+  padding: 5px;
+}
+
+button {
+  margin-left: 15px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 0px;
+  color: white;
+  background-color: #069ee0;
+}
+
 /*** media queries ****/
+
+/* needed for poltergeist testing */
+@media (width: 1050px) and (height: 800px) {
+  div.area-pane div.tab-content div.tab-pane div#map {
+    min-height: 700px;
+  }
+
+  .nav li.dropdown a {
+    padding-bottom: 15px;
+    padding-top: 17px;
+  }
+}
 
 /* Large */
 @media (min-width: 1200px) {
+  .nav li.dropdown a {
+    padding-bottom: 15px;
+    padding-top: 17px;
+  }
 }
 
 /* Medium */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .nav li.dropdown a {
+    padding-bottom: 15px;
+    padding-top: 17px;
+  }
 }
 
 /* Small */
@@ -182,8 +508,21 @@ sd-image-viewer .glyphicon-chevron-right {
     margin-left: auto;
     margin-right: auto 
   }
+
 }
 
 /* Super-extra small */
 @media (max-width: 479px) {
+}
+
+@media (max-width: 336px) {
+  button.btn.btn-default, label.btn.btn-default {
+    margin: 10px 0px 0px 0px;
+    width: 125px;
+    border-radius: 15px;
+  }
+
+  #login-submit button.btn.btn-default {
+    margin-left: 10px;
+  }
 }
