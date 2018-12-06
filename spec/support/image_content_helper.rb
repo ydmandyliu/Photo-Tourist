@@ -1,6 +1,6 @@
 module ImageContentHelper
-  BASE_URL="https://en.wikipedia.org/wiki"
-  URL_PATH="Universe#/media/File:NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg"
+  BASE_URL="https://dev9.jhuep.com/fullstack-capstone"
+  URL_PATH="db/bta/skyline.jpg"
   IMAGE_PATH="db/images/sample.jpg"
 
 
