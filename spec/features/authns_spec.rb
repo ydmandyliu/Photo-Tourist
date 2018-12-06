@@ -15,7 +15,8 @@ RSpec.feature "Authns", type: :feature, :js=>true do
         #check the DB for the existance of the User account
         user=User.where(:email=>user_props[:email]).first
         #make sure we were the ones that created it
-        expect(user.created_at).to be > start_time        
+        expect(user.created_at).to be > start_time
+        sleep 0.5 #give time for async requests to finish on server        
       end
     end
 
@@ -50,8 +51,8 @@ RSpec.feature "Authns", type: :feature, :js=>true do
         expect(page).to have_css("#signup-form > span.invalid",
                                  :text=>"Password is too short")
         expect(page).to have_css("#signup-form > span.invalid",
-                                 :text=>"Email has already been taken")
-        expect(page).to have_css("#signup-email span.invalid",:text=>"has already been taken")
+                                 :text=>"Email already in use")
+        expect(page).to have_css("#signup-email span.invalid",:text=>"already in use")
         expect(page).to have_css("#signup-password span.invalid",:text=>"too short")
         within("#signup-password_confirmation") do
           expect(page).to have_css("span.invalid",:text=>"doesn't match")
@@ -118,6 +119,9 @@ RSpec.feature "Authns", type: :feature, :js=>true do
     end
 
     context "valid user login" do
+      after(:each) do
+        sleep 0.5 #give time for async requests to finish on server
+      end
       scenario "closes form and displays current user name" do
         expect(page).to have_css("#navbar-loginlabel",:text=>/#{user_props[:name]}/)
         expect(page).to have_no_css("#login-form")
@@ -190,7 +194,7 @@ RSpec.feature "Authns", type: :feature, :js=>true do
       checkme
       within ("div.checkme-user") do
         expect(page).to have_no_css("label", :text=>/#{user_props[:name]}/)
-        expect(page).to have_css("label", :text=>/Unauthorized/,:wait=>5)
+        expect(page).to have_css("label", :text=>/Authorized users only/,:wait=>5)
       end
     end
   end

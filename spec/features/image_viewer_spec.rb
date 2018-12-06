@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative '../support/subjects_ui_helper.rb'
 
-RSpec.feature "ImageViewers", type: :feature, js: true do
+RSpec.feature "ImageViewer", type: :feature, js: true do
   include_context "db_cleanup"
   include SubjectsUiHelper
 
