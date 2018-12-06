@@ -8,22 +8,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" ui-sref="home">Brand</a>
+      <a class="navbar-brand" ui-sref="home">Photo Tourist<span class="glyphicon glyphicon-map-marker" style="font-size:23px;color:#444444;margin-left:5px;"></span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To <span class="caret"></span></a>
 
           <ul class="dropdown-menu">
             <li ui-sref-active="active">
-                <a ui-sref="authn">Authentication Check</a></li>
+                <span><span class="glyphicon glyphicon-check"></span><a ui-sref="authn">Authentication Check</a></span></li>
+            <li ui-sref-active="{'active': 'images'}">
+                <span><span class="glyphicon glyphicon-picture"></span><a ui-sref="images({id:null})">Images</a></span></li>
+            <li ui-sref-active="{'active': 'things'}">
+                <span><span class="glyphicon glyphicon-camera"></span><a ui-sref="things({id:null})">Attractions</a></span></li>
             <li ui-sref-active="active">
-                <a ui-sref="images({id:null})">Images</a></li>
-            <li ui-sref-active="active">
-                <a ui-sref="things({id:null})">Things</a></li>
+                <span><span class="glyphicon glyphicon-list"></span><a ui-sref="home">Subjects</a></span></li>
           </ul>
           
         </li>
