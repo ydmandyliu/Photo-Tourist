@@ -30,6 +30,7 @@
 
 //= require spa/geoloc/geoloc.module
 //= require spa/geoloc/geocoder.service
+//= require spa/geoloc/map.service
 //= require spa/geoloc/my_location.service
 // require spa/geoloc/jhu_location.config
 //= require spa/geoloc/current_origin/current_origin.service
@@ -41,6 +42,9 @@
 //= require spa/layout/image_loader/data_utils.service
 //= require spa/layout/image_loader/image_loader.component
 //= require spa/layout/image_viewer/image_viewer.component
+
+//= require spa/layout/tabs/tabs.component
+//= require spa/layout/areas/areas.component
 
 //= require spa/states/states.module
 //= require spa/states/states.service
@@ -59,3 +63,8 @@
 //= require spa/subjects/things/things_authz.service
 //= require spa/subjects/things/things_authz.directive
 //= require spa/subjects/things/things.component
+
+//= require spa/subjects/current_subjects/current_subjects.service
+//= require spa/subjects/current_subjects/current_subjects.component
+//= require spa/subjects/current_images/current_images.component
+//= require spa/subjects/current_things/current_things.component
