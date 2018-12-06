@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :image do
-    sequence(:caption) { |n| n%2==0 ? nil : Faker::Lorem.sentence(1).chomp(".") }
+    sequence(:caption) { |n| n%2==0 ? nil : Faker::Lorem.sentence(3).chomp(".") }
     creator_id 1
     image_content { FactoryGirl.attributes_for(:image_content) }
     position      { FactoryGirl.build(:point).to_hash }
