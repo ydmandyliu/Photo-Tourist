@@ -51,7 +51,7 @@
 
   <div class="image-location row col-lg-12" >
     <label class="col-xs-3">Position:</label>
-    <div class="col-sm-9 col-xs-12" ng-show="$ctrl.item.position">
+    <div class="col-sm-9 col-xs-9" ng-show="$ctrl.item.position">
       <label>lng: </label><span class="lng">{{$ctrl.item.position.lng}}</span>
       <label>lat: </label><span class="lat">{{$ctrl.item.position.lat}}</span>
     </div>
@@ -89,7 +89,7 @@
       <button name="image-create"
               ng-show="!$ctrl.item.id && $ctrl.authz.canCreate"
               type="submit"
-              ng-disabled="imageform.$invalid"
+              ng-disabled="imageform.$invalid || !$ctrl.item.image_content.content"
               ng-click="$ctrl.create()">Create Image</button>
 
       <span ng-show="$ctrl.item.id">
