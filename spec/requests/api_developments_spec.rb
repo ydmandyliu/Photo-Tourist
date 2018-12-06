@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "ApiDevelopments", type: :request do
+  include_context "db_cleanup_each"
   def parsed_body
   	JSON.parse(response.body)
   end
