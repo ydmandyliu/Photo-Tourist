@@ -11,7 +11,7 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     authorize Image
-    @images = policy_scope(Image.all);
+    @images = policy_scope(Image.all)
     @images = ImagePolicy.merge(@images)
   end
 
