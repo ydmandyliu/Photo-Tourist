@@ -24,7 +24,7 @@
       $auth.validateUser().then(
         function(user){
           service.user = user;
-          console.log("validated user", user);
+          // console.log("validated user", user);
         });
     }
     function signup(registration) {
@@ -43,7 +43,7 @@
       return service.user;
     }
     function login(credentials) {
-      console.log("login", credentials.email);
+      // console.log("login", credentials.email);
       var result=$auth.submitLogin({
         email: credentials["email"],
         password: credentials["password"]
@@ -52,7 +52,7 @@
 
       result.then(
         function(response){
-          console.log("login complete", response);
+          // console.log("login complete", response);
           service.user = response;
           deferred.resolve(response);
         },
@@ -61,7 +61,7 @@
             full_messages: response.errors 
             }
           };
-          console.log("login failure", response);            
+          // console.log("login failure", response);            
           deferred.reject(formatted_errors);
         });
 
@@ -69,16 +69,16 @@
     }
 
     function logout() {
-      console.log("logout");
+      // console.log("logout");
       var result=$auth.signOut();
       result.then(
         function(response){
           service.user = null;
-          console.log("logout complete", response);
+          // console.log("logout complete", response);
         },
         function(response){
           service.user = null;
-          console.log("logout failure", response);
+          // console.log("logout failure", response);
           alert(response.status + ":" + response.statusText);            
         });
       return result;
