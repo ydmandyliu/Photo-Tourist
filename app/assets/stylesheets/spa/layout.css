@@ -88,12 +88,11 @@ a:hover {
 /* get the two origin forms to be side-by-side */
 span.search-criteria form {
   display: inline;
-  padding-left: 5px;
   padding-right: 5px;
 }
 
 /* re-position the fields after we applied the display inline */
-span.search-criteria form input {
+span.search-criteria form {
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -150,10 +149,6 @@ form#login-form {
 
 .form-group, #new-account {
   padding-left: 10px;
-}
-
-form.navbar-form {
-  padding-left: 0px;
 }
 
 input::placeholder {
@@ -446,10 +441,6 @@ button {
     padding-bottom: 15px;
     padding-top: 17px;
   }
-
-  form.navbar-form {
-    margin-top: 8px;
-  }
 }
 
 /* Medium */
@@ -457,10 +448,6 @@ button {
   .nav li.dropdown a {
     padding-bottom: 15px;
     padding-top: 17px;
-  }
-
-  form.navbar-form {
-    margin-top: 8px;
   }
 }
 
