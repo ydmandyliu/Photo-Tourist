@@ -55,24 +55,6 @@ a:hover {
   padding-right: 5px;
 }
 
-div.thing-info {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-div.thing-marker-info div {
-  margin-top: 3px;
-}
-
-div.thing-marker-info img {
-  margin-top: 3px;
-}
-
-.thing-info h4 {
-  font-weight: bold;
-  color: #069ee0;
-}
-
 /*********** navbar *************/
 
 .navbar {
@@ -181,8 +163,20 @@ input::placeholder {
   color: #cccccc;
 }
 
+form#signup-form {
+  background-color: #eeeeee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
 #signup-form div input {
   padding-left: 0px;
+}
+
+form div#signup-controls {
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 ul.dropdown-menu {
@@ -297,6 +291,10 @@ span.overlay.glyphicon.glyphicon-chevron-left, span.overlay.glyphicon.glyphicon-
   margin-top: 30px;
 }
 
+span.overlay.glyphicon.glyphicon-chevron-left:hover, span.overlay.glyphicon.glyphicon-chevron-right:hover {
+  opacity: 1;
+}
+
 span.glyphicon {
   margin-left: 15px;
   margin-right: 10px;
@@ -400,6 +398,10 @@ sd-image-viewer div.image-items span.id {
 .image-caption input, .thing-name input {
   border-width: 0px;
   border-bottom: 1px solid #069ee0;
+}
+
+label.image-caption {
+  font-weight: normal;
 }
 
 form div {
@@ -509,6 +511,11 @@ button {
     margin-right: auto 
   }
 
+  span.caption.overlay {
+    font-size: 15px;
+    line-height: 1em;
+    padding-top: 3px;
+  }  
 }
 
 /* Super-extra small */

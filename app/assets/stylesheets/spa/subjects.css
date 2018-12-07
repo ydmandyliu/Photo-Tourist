@@ -26,11 +26,18 @@ div.subjects-page {
   padding-right: 0px;
 }
 
+.thing-info h4 {
+  font-weight: bold;
+  color: #069ee0;
+}
+
 div.thing-info span.id {
   display: none;
 }
 div.thing-info {
   margin-left: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
 }
 div.thing-info .glyphicon {
@@ -55,6 +62,37 @@ div.thing-info .overlay:hover {
   opacity: 1;
 }
 
+div.thing-controls button, div.image-controls button {
+  padding: 5px 15px 4px 15px;
+}
+
+div.thing-controls button:disabled, div.image-controls button:disabled {
+  border-width: 1px;
+  background-color: white;
+  border-color: grey;
+}
+
+.image-form, .thing-form {
+  margin-bottom: 10px;
+  background-color: #eeeeee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+}
+
+.image-rendering {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+[readonly='readonly'] {
+  background-color: white;
+}
+
+div.images-area, div.things-area {
+  padding-left: 0px;
+}
+
 /*** map info windows ***/
 div.thing-marker-info span.id,
 div.image-marker-info span.id {
@@ -65,3 +103,16 @@ div.thing-marker-info img,
 div.image-marker-info img {
   width: 200px;
 }
+
+div.thing-marker-info div {
+  margin-top: 3px;
+}
+
+div.thing-marker-info img {
+  margin-top: 3px;
+}
+
+div.thing-controls {
+  height: 30px;
+}
+
