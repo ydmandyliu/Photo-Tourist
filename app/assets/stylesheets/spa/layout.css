@@ -444,6 +444,7 @@ button {
 
   span.origin-control.navbar-left {
     height: 50px;
+    padding-top: 8px;
   }
 }
 
@@ -456,6 +457,7 @@ button {
 
   span.origin-control.navbar-left {
     height: 50px;
+    padding-top: 8px;
   }
 }
 
@@ -522,6 +524,14 @@ button {
 
   form.navbar-form {
     padding-left: 0px;
+  }
+
+  span.search-criteria {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
   }  
 }
 
