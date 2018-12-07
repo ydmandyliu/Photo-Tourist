@@ -446,6 +446,10 @@ button {
     padding-bottom: 15px;
     padding-top: 17px;
   }
+
+  form.navbar-form {
+    margin-top: 8px;
+  }
 }
 
 /* Medium */
@@ -453,6 +457,10 @@ button {
   .nav li.dropdown a {
     padding-bottom: 15px;
     padding-top: 17px;
+  }
+
+  form.navbar-form {
+    margin-top: 8px;
   }
 }
 
@@ -515,6 +523,12 @@ button {
     font-size: 15px;
     line-height: 1em;
     padding-top: 3px;
+  }
+
+  form.navbar-form {
+    padding-left: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }  
 }
 
