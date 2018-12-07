@@ -446,6 +446,10 @@ button {
     height: 50px;
     padding-top: 8px;
   }
+
+  form.navbar-form {
+    margin-top: 0px;
+  }
 }
 
 /* Medium */
@@ -458,6 +462,10 @@ button {
   span.origin-control.navbar-left {
     height: 50px;
     padding-top: 8px;
+  }
+
+  form.navbar-form {
+    margin-top: 0px;
   }
 }
 
