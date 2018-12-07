@@ -88,7 +88,7 @@
             name="thing-create"
             ng-disabled="thingform.$invalid"
             type="submit"
-            ng-click="$ctrl.create()">Create Thing</button>
+            ng-click="$ctrl.create()">Create</button>
 
     <div ng-show="$ctrl.item.id">
       <span class="thing-modify"
@@ -102,7 +102,7 @@
                   (!thingform['thing-name'].$dirty && 
                    !thingform['thing-desc'].$dirty && 
                    !thingform['thing-notes'].$dirty)"
-                ng-click="$ctrl.update()">Update Thing</button>
+                ng-click="$ctrl.update()">Update</button>
         <button name="thing-images-update"
                 type="submit"          
                 data-ng-show="$ctrl.haveDirtyLinks() &&
@@ -115,10 +115,10 @@
       <button name="thing-delete"
               type="submit"
               ng-show="$ctrl.authz.canDelete" 
-              ng-click="$ctrl.remove()">Delete Thing</button>
+              ng-click="$ctrl.remove()">Delete</button>
       <button name="image-clear"
               type="submit"
-              ng-click="$ctrl.clear()">Clear Thing</button>
+              ng-click="$ctrl.clear()">Clear</button>
     </div>
   </div>
 </form>

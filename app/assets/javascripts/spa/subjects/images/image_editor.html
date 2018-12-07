@@ -3,8 +3,8 @@
   <span class="invalid">{{$ctrl.item.errors.full_messages}}</span>
 
   <div class="image-content row col-lg-12">
-    <label class="col-xs-3"></label>
-    <div class="col-xs-12 col-sm-9 image-rendering">  
+    <label class="col-xs-3" style="margin-top: 5px;">File upload:</label>
+    <div class="col-xs-9 col-sm-9 image-rendering">  
       <div class="image-existing">
         <img class="img-responsive img-rounded" 
              style="width: 250px"             
@@ -90,14 +90,14 @@
               ng-show="!$ctrl.item.id && $ctrl.authz.canCreate"
               type="submit"
               ng-disabled="imageform.$invalid || !$ctrl.item.image_content.content"
-              ng-click="$ctrl.create()">Create Image</button>
+              ng-click="$ctrl.create()">Create</button>
 
       <span ng-show="$ctrl.item.id">
         <button name="image-update"
                 type="submit"
                 ng-show="$ctrl.authz.canUpdate" 
                 ng-disabled="!imageform.$dirty"
-                ng-click="$ctrl.update()">Update Image</button>
+                ng-click="$ctrl.update()">Update</button>
         <button name="image-update"
                 type="submit"
                 ng-show="!$ctrl.authz.canUpdate" 
@@ -106,13 +106,13 @@
         <button name="image-delete"
                 type="submit"
                 ng-show="$ctrl.authz.canDelete" 
-                ng-click="$ctrl.remove()">Delete Image</button>
+                ng-click="$ctrl.remove()">Delete</button>
       </span>
     </span>
     <button name="image-clear"
             type="submit"
             ng-show="$ctrl.item.id || imageform.$dirty"
-            ng-click="$ctrl.clear()">Clear Image</button>
+            ng-click="$ctrl.clear()">Clear</button>
   </div>
 
 </form>
